@@ -12,10 +12,8 @@
 		  </div>
 		</div>
 		`
-    })
-    .Class({
-      constructor: function() {
-      	var hero;
-      }
+    });
+    ng.core.Input({
+    	hero: ''
     });
 })(window.app || (window.app = {}));
