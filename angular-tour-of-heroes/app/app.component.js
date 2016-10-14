@@ -1,8 +1,4 @@
 (function(app) {
-	Hero = function(id,name) {
-		this.id = id;
-		this.name = name;
-	}
 	app.AppComponent =
 		ng.core.Component({
 			selector: 'my-app',
@@ -16,13 +12,7 @@
 			        <span class="badge">{{hero.id}}</span> {{hero.name}}
 			      </li>
 			  </ul>
-			  <div *ngIf="selectedHero">
-			  	<h2>{{selectedHero.name}} details!</h2>
-			  	<div><label>id: </label>{{selectedHero.id}}</div>
-			  <div>
-			    <label>name: </label>
-			    <input [(ngModel)]="selectedHero.name" placeholder="name">
-			  </div></div>
+			  <my-hero-detail></my-hero-detail>
 			  `,
 			  styles: [`
     .selected {
